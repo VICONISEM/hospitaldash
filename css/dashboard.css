@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard-container {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px;  /* Increase padding for more space inside */
+    border-radius: 10px;
+    width: 80%;     /* Increase width to 95% of the viewport */
+    height: 50%;
+    max-width: 1400px; /* Increase the maximum width */
+}
+
+
+header h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+.options-container {
+    display: flex;
+    justify-content: center;  /* Center buttons horizontally */
+    align-items: center;      /* Center buttons vertically */
+    gap: 50px;
+    flex-wrap: wrap;          /* Allow wrapping on smaller screens */
+}
+
+.option-card {
+    background-color: #007bff;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.option-card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.option-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    background-color: #0056b3;
+}
+
+.option-card:active {
+    transform: translateY(2px);
+}
+
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 28px;
+    }
+    .option-card h3 {
+        font-size: 18px;
+    }
+    .option-card {
+        width: 200px;  /* Reduce width on smaller screens */
+    }
+}
